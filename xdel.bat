@@ -1,0 +1,11 @@
+del /s *.obj
+del /s *.pch
+del /s *.pdb
+del /s *.idb
+del /s *.ncb
+del /s *.ilk
+del /s *.cod
+del /s *.res
+del /s *.sbr
+del /s *.opt
+del /s *.bsc
