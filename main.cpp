@@ -6,7 +6,7 @@
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Input.H>
 #include <FL/Fl_Widget.H>
-#include <FL/Fl_Draw.H>
+#include <FL/fl_draw.H>
 #include <math.h>
 #include <string>
 #include <utility>
