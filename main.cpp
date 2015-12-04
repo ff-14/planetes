@@ -415,7 +415,7 @@ void add_object(struct list* l, struct game_object* o, int x, int y) //WARNING: 
 int main(int argc, char * argv[]) 
 {
 
-	Fl_Draw_Box* window = new Fl_Draw_Box(820, 620, "mario");
+	Fl_Draw_Box* window = new Fl_Draw_Box(820, 610, "mario");
 	// Init player an list of objects
 	PLAYER.h = 50;
 	PLAYER.w = 50;
