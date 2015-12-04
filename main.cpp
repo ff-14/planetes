@@ -1,7 +1,7 @@
 #include "fltkopt.h"
 #include <stdio.h>
 #include <FL/Fl.H>
-#include <FL/Fl_Window.H>
+#include <FL/Fl_Double_Window.H>
 #include <FL/Fl_Box.H>
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Input.H>
@@ -11,8 +11,8 @@
 #include <string>
 #include <utility>
 
-class Fl_Draw_Box : public Fl_Window{
 	
+class Fl_Draw_Box : public Fl_Double_Window{
 	public: 
 	float X,Y,R;
 	int w,h;
@@ -20,6 +20,7 @@ class Fl_Draw_Box : public Fl_Window{
 	bool first;
 	bool red;
 	Fl_Draw_Box(int w, int h, const char* test) : Fl_Window(w,h,test) 
+	Fl_Draw_Box(int w, int h, const char* test) : Fl_Double_Window(w, h, test)
 	{
 		this->w = w;
 		this->h = h;
@@ -32,7 +33,6 @@ class Fl_Draw_Box : public Fl_Window{
 	}
 
 	virtual void draw() {
-		Fl_Window::draw();
 
 		uchar  rgb[] = {255, 0, 0, 255, 0, 0, 255, 0, 0, 255, 0, 0};
 		fl_draw_image(rgb, 0, 0,2, 2, 3, 0);
@@ -41,6 +41,7 @@ class Fl_Draw_Box : public Fl_Window{
 		fl_circle(X,Y,R);
 		
 		if (Y +dy < 0+R)
+		Fl_Double_Window::draw();
 		{
 			dy =-dy;
 		}	
